@@ -16,6 +16,9 @@
           "Home",
           {
             "group": "Dashboard",
+            "icon": "display-chart-up",
+            "tag": "Dashboard",
+            "expanded": true,
             "pages": [
               "Overview"
             ]

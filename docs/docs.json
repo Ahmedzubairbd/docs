@@ -1,0 +1,21 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "NEXT Ventures Finance",
+  "colors": {
+    "primary": "#0D9373"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": []
+      }
+    ]
+  },
+  "favicon": "/images/LogoFavicon.svg",
+  "logo": {
+    "light": "/images/LogoFavicon.svg",
+    "dark": "/Logo (1).gif"
+  }
+}

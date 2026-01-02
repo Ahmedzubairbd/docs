@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "linden",
   "name": "NEXT Ventures Finance",
   "colors": {
     "primary": "#0D9373"
@@ -8,7 +8,9 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "FP&A Navigator",
+        "icon": "diagram-subtask",
+        "tag": "Navigator",
         "pages": [
           "Home",
           {
@@ -21,9 +23,21 @@
       }
     ]
   },
-  "favicon": "/images/LogoFavicon.svg",
+  "favicon": {
+    "light": "/images/LogoFavicon.svg",
+    "dark": "/images/LogoFavicon.svg"
+  },
   "logo": {
     "light": "/images/LogoFavicon.svg",
     "dark": "/Logo (1).gif"
+  },
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "dark": "#000000"
+    }
+  },
+  "appearance": {
+    "default": "dark"
   }
 }

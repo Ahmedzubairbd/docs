@@ -10,7 +10,13 @@
       {
         "group": "Getting Started",
         "pages": [
-          ""
+          "Home",
+          {
+            "group": "Dashboard",
+            "pages": [
+              "Overview"
+            ]
+          }
         ]
       }
     ]

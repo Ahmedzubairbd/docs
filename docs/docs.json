@@ -10,8 +10,8 @@
       {
         "tab": "Finance",
         "pages": [
-          "finance/analytics",
-          "finance/welcome"
+          "Finance/Overview",
+          "finance/analytics"
         ]
       }
     ]

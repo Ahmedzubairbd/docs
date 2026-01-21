@@ -9,7 +9,15 @@
     "tabs": [
       {
         "tab": "Finance",
-        "href": "https://ui.nextlab.info/"
+        "pages": [
+          "finance/home"
+        ]
+      },
+      {
+        "tab": "Analytics",
+        "pages": [
+          "analytics/overview"
+        ]
       }
     ]
   },

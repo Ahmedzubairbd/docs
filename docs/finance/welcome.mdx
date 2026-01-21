@@ -1,5 +1,71 @@
 ---
-title: 'Welcome'
-
+title: "Welcome to Finance Dashboard"
+sidebarTitle: "Home"
+description: "Track your finances, view analytics, manage budgets and generate reports — all in one place."
+mode: "wide"
+icon: "chart-line"
+tag: "NEW"
 ---
 
+# Welcome to Finance Dashboard
+
+Your modern financial overview and management hub.
+
+Get real-time insights into your income, expenses, savings goals, and investment performance.
+
+<Info>
+This dashboard is under active development — new features are coming every week!
+</Info>
+
+## Key Features
+
+<Columns size={3}>
+
+<Card title="Real-time Analytics" icon="chart-mixed">
+Monitor spending patterns, income trends, and net worth changes with beautiful interactive charts.
+</Card>
+
+<Card title="Budget Planner" icon="wallet">
+Set monthly budgets per category and get smart alerts when you're close to limits.
+</Card>
+
+<Card title="Report Generator" icon="file-invoice">
+Export professional PDF/Excel reports — monthly summaries, tax-ready statements, and more.
+</Card>
+
+<Card title="Goal Tracker" icon="bullseye-arrow">
+Define savings or debt payoff goals and watch your progress with visual milestones.
+</Card>
+
+<Card title="Multi-Account Support" icon="building-columns">
+Connect checking, savings, credit cards, investments — view everything in one dashboard.
+</Card>
+
+<Card title="AI Assistant" icon="sparkles">
+Ask natural language questions like "How much did I spend on food last month?" — get instant answers.
+</Card>
+
+</Columns>
+
+## Quick Start — Add Your First Transaction
+
+```tsx
+// Example: POST /api/transactions (using fetch)
+async function addTransaction() {
+  const response = await fetch('/api/transactions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      date: '2026-01-20',
+      amount: 1250.75,
+      category: 'Salary',
+      type: 'income',
+      description: 'Monthly paycheck - Company XYZ',
+      accountId: 'acc_123456'
+    })
+  });
+
+  if (response.ok) {
+    console.log('Transaction added!');
+  }
+}

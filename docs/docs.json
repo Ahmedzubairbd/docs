@@ -6,23 +6,11 @@
     "primary": "#0D9373"
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "FP&A Navigator",
-        "icon": "diagram-subtask",
-        "tag": "Navigator",
-        "expanded": true,
+        "tab": "Finance",
         "pages": [
-          "Home",
-          {
-            "group": "Dashboard",
-            "icon": "display-chart-up",
-            "tag": "Dashboard",
-            "expanded": true,
-            "pages": [
-              "Overview"
-            ]
-          }
+          "finance/welcome"
         ]
       }
     ]
@@ -52,14 +40,18 @@
       },
       {
         "label": "Overview",
-        "href": "/Dashboard/Overview"
+        "href": "/dashboard/overview"
+      },
+      {
+        "label": "About",
+        "href": "/about"
       }
     ]
   },
   "footer": {
     "links": [
       {
-        "header": "পেজসমূহ",
+        "header": "Links",
         "items": [
           {
             "label": "FAQs - সাধারণ প্রশ্নোত্তর",
@@ -68,7 +60,7 @@
         ]
       },
       {
-        "header": "আমাদের অবস্থান",
+        "header": "Our Other Options",
         "items": [
           {
             "label": "FP&A Workflows",

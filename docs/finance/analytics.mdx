@@ -1,0 +1,170 @@
+title: "Analytics Dashboard"
+sidebarTitle: "Analytics"
+description: "View detailed financial insights, trends, and reports with interactive charts and data tables."
+mode: "wide"
+icon: "chart-bar"
+tag: "INSIGHTS"
+Financial Analytics
+Gain deep insights into your finances with real-time data visualizations and summaries.
+<Info>
+All data shown here is demo data for illustration. In a real setup, connect your accounts to see personalized analytics.
+</Info>
+Key Metrics
+<Columns size={4}>
+<Card title="Total Income" icon="arrow-trend-up">
+$45,670
+<small>Last 12 months</small>
+</Card>
+<Card title="Total Expenses" icon="arrow-trend-down">
+$32,450
+<small>Last 12 months</small>
+</Card>
+<Card title="Net Savings" icon="piggy-bank">
+$13,220
+<small>Last 12 months</small>
+</Card>
+<Card title="Average Monthly Spend" icon="wallet">
+$2,704
+<small>Across categories</small>
+</Card>
+</Columns>
+Income vs Expenses Trend
+A line chart showing monthly income and expenses over the past year.
+
+graph LR
+    subgraph "Legend"
+        Income[Income] -->| | A[ ]
+        Expenses[Expenses] -->| | B[ ]
+    end
+
+    %% Data points
+    Jan --> IncomeJan[$3,500]
+    Jan --> ExpensesJan[$2,800]
+    Feb --> IncomeFeb[$4,200]
+    Feb --> ExpensesFeb[$3,100]
+    Mar --> IncomeMar[$3,800]
+    Mar --> ExpensesMar[$2,900]
+    Apr --> IncomeApr[$4,500]
+    Apr --> ExpensesApr[$3,200]
+    May --> IncomeMay[$4,000]
+    May --> ExpensesMay[$2,700]
+    Jun --> IncomeJun[$3,900]
+    Jun --> ExpensesJun[$3,000]
+    Jul --> IncomeJul[$4,100]
+    Jul --> ExpensesJul[$2,950]
+    Aug --> IncomeAug[$4,300]
+    Aug --> ExpensesAug[$3,150]
+    Sep --> IncomeSep[$3,700]
+    Sep --> ExpensesSep[$2,850]
+    Oct --> IncomeOct[$4,000]
+    Oct --> ExpensesOct[$3,050]
+    Nov --> IncomeNov[$4,200]
+    Nov --> ExpensesNov[$3,200]
+    Dec --> IncomeDec[$4,500]
+    Dec --> ExpensesDec[$3,300]
+
+    %% Note: For actual line chart, use chart syntax
+    %% Mermaid chart example (simplified as bar for compatibility)
+
+
+Note: For a proper line chart, integrate a library like Chart.js in custom components. Here's a Mermaid bar chart approximation:
+
+
+gantt
+    title Income vs Expenses (Bar Approximation)
+    dateFormat  YYYY-MM
+    axisFormat %b %Y
+
+    section Income
+    $3500 :2025-01, 1m
+    $4200 :2025-02, 1m
+    $3800 :2025-03, 1m
+    $4500 :2025-04, 1m
+    $4000 :2025-05, 1m
+    $3900 :2025-06, 1m
+    $4100 :2025-07, 1m
+    $4300 :2025-08, 1m
+    $3700 :2025-09, 1m
+    $4000 :2025-10, 1m
+    $4200 :2025-11, 1m
+    $4500 :2025-12, 1m
+
+    section Expenses
+    $2800 :2025-01, 1m
+    $3100 :2025-02, 1m
+    $2900 :2025-03, 1m
+    $3200 :2025-04, 1m
+    $2700 :2025-05, 1m
+    $3000 :2025-06, 1m
+    $2950 :2025-07, 1m
+    $3150 :2025-08, 1m
+    $2850 :2025-09, 1m
+    $3050 :2025-10, 1m
+    $3200 :2025-11, 1m
+    $3300 :2025-12, 1m
+
+
+
+
+Expense Breakdown by Category
+A pie chart displaying expense distribution.
+
+
+pie title Expenses by Category (Last Month)
+    "Food & Dining" : 25
+    "Housing" : 30
+    "Transportation" : 15
+    "Entertainment" : 10
+    "Utilities" : 10
+    "Other" : 10
+
+xychart-beta
+    title "Savings Growth (Quarterly)"
+    x-axis [Q1, Q2, Q3, Q4]
+    y-axis "Savings ($)" 0 --> 5000
+    bar [3200, 3800, 4100, 4500]
+    line [3200, 3800, 4100, 4500]
+
+
+ID,Date,Description,Category,Amount,Type,Actions
+1,2026-01-01,Salary Deposit,Income,"$4,000",Credit,Edit / Delete
+2,2026-01-05,Grocery Shopping,Food,-$150,Debit,Edit / Delete
+3,2026-01-10,Rent Payment,Housing,"-$1,200",Debit,Edit / Delete
+4,2026-01-15,Freelance Payment,Income,"$1,500",Credit,Edit / Delete
+5,2026-01-20,Utility Bill,Utilities,-$200,Debit,Edit / Delete
+
+
+
+// Create a new transaction
+async function createTransaction(data) {
+  const response = await fetch('/api/transactions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+}
+
+// Read all transactions
+async function getTransactions() {
+  const response = await fetch('/api/transactions');
+  return response.json();
+}
+
+// Update a transaction
+async function updateTransaction(id, data) {
+  const response = await fetch(`/api/transactions/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+}
+
+// Delete a transaction
+async function deleteTransaction(id) {
+  const response = await fetch(`/api/transactions/${id}`, {
+    method: 'DELETE',
+  });
+  return response.ok;
+}
